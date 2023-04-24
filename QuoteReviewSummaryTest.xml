@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="APAC Quote pay testing">
+	<!-- Test
+  <test thread-count="2" parallel="methods" name="Test">
+  </test>   -->
+	<listeners>
+		<listener class-name="com.zurich.qa.digitalnative.listeners.ExtentReportListener" />
+		<listener class-name="com.zurich.qa.digitalnative.listeners.TestAllureListener" />
+	</listeners>
+	<test thread-count="1" name="APAC Quote Pay test">
+		<parameter name="ReadExcelPath" value="APACRoundTrip" />
+		<parameter name="DataSheetName" value="DINA-357" />
+		<classes>
+			<class name="com.zurich.qa.digitalnative.testcases.APACPayReviewSummaryTest">
+				<methods>
+					<include name="validateProgressBarIcons_DINA1242_3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

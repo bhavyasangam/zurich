@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="APAC Quote Screen3(Quote PolicyHolder) Test">
+	<!-- Test
+  <test thread-count="2" parallel="methods" name="Test">
+  </test>   -->
+	<listeners>
+		<listener class-name="com.zurich.qa.digitalnative.listeners.ExtentReportListener" />
+		<listener class-name="com.zurich.qa.digitalnative.listeners.TestAllureListener" />
+	</listeners>
+	<test thread-count="1" name="APAC Quote Policy holder test">
+		<parameter name="ReadExcelPath" value="APACOneWay" />
+		<parameter name="DataSheetName" value="DINA-88" />
+		<classes>
+			<class name="com.zurich.qa.digitalnative.testcases.APACPortfolioTest">
+				<methods>
+					<include name="verifyAllPolicies_DINA_325_1" />
+					<include name="verifyPoliciesDetails_DINA_325_2" />
+					<include name="verifyViewAllPolicies_DINA_325_3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>

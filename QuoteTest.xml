@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="APAC Quote Screen1 Test">
+	<!-- Test <test thread-count="2" parallel="methods" name="Test"> </test> -->
+	<listeners>
+		<listener
+			class-name="com.zurich.qa.digitalnative.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.zurich.qa.digitalnative.listeners.TestAllureListener" />
+	</listeners>
+
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-Me/Me+1">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_2_3" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateSingleTripForMeAndDuoDINA84" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-My family/A Group-Today">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_4_5" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateSingleTripForFamilyAndGroupDINA84" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-Me/Me+1-Past Date">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_6_7" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateSingleTripJustMeAndDuoPastDate_DINA84_6_7" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-My family/A Group-PastDate">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_8_9" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateSingleTripForFamilyAndGroupPastDateDINA84_8_9" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-Me/Me+1-Future Date">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_10_11" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateSingleTripForFamilyAndGroupPastDateDINA84_10_11" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1"
+		name="verify Choose Me enabled for RoundTrip-My family/A Group-Future Date">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_84_12_13" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateSingleTripForFamilyAndGroupPastDateDINA84_12_13" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Me/Duo-Today">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_2_3" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateOnewayTripMeAndDuoToDAYDINA85_2_3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Family/Group-Today">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_4_5" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateOneWayTripForFamilyAndGroupDINA85_4_5" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Me/Duo-Past">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_6_7" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateOneWayTripJustMeAndDuoPastDate_DINA85_6_7" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Family/Group-Past">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_8_9" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include
+						name="validateOneWayTripForFamilyAndGroupPastDateDINA85_8_9" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Me/Duo-Future">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_10_11" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateOneWayTripForFamilyAndGroupFutureDateDINA85_10_11" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Oneway-Family/Group-Future">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_85_12_13" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateOneWayTripForFamilyAndGroupPastDateDINA85_12_13" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Me/Duo-Today">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_2_3" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelMeAndDuoToDAYDINA86_2_3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Family/Group-Today">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_4_5" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelForFamilyAndGroupDINA86_4_5" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Me/Duo-Past">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_6_7" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelJustMeAndDuoPastDate_DINA86_6_7" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Family/Group-Past">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_8_9" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelForFamilyAndGroupPastDateDINA86_8_9" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Me/Duo-Future">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_10_11" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelForFamilyAndGroupFutureDateDINA86_10_11" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="Annual-Family/Group-Future">
+		<parameter name="ReadExcelPath" value="APACSingle" />
+		<parameter name="DataSheetName" value="DINA_86_12_13" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="validateAnnualTravelForFamilyAndGroupPastDateDINA86_12_13" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="verify all fields">
+		<parameter name="ReadExcelPath" value="APACCommonCaseS1" />
+		<parameter name="DataSheetName"
+			value="TripDetailsForInvalidCustomer" />
+		<classes>
+			<class
+				name="com.zurich.qa.digitalnative.testcases.APACQuoteTest">
+				<methods>
+					<include name="invalidTravellersCountInMyFamily_DINA84_14" />
+					<include name="verifyNotificationMessageForSenior_DINACommon_1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite> 

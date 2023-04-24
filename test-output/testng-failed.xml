@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.zurich.qa.digitalnative.testcases.APACQuotePlanTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="verifyAddOnsShortDescDINA90_1"/>
+          <include name="verifyOneWayQuotePlans_DINA88_1"/>
+          <include name="verifyTotPremSectionDINA91_2"/>
+          <include name="verifyQuoteInvalidMultipleCountriesDINA88_3"/>
+          <include name="verifySelectUnselectPlanDINA91_1"/>
+          <include name="verifyQuoteMultipleCountriesDINA88_3"/>
+          <include name="verifyAddOnsReadMoreDINA90_2"/>
+          <include name="setOptions"/>
+          <include name="verifyStartReturnDateDINA1579_1"/>
+          <include name="verifyQuotePlanPrevNextDINA88_2"/>
+          <include name="afterClass"/>
+          <include name="validateAnnualTravel_DINA88_11"/>
+          <include name="verifyStartReturnDateDINA1579_2"/>
+          <include name="verifyStartReturnDateDINA1579_3"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="validateRoundTrip_DINA88_1"/>
+          <include name="verifyStartReturnDateDINA1579_4"/>
+        </methods>
+      </class> <!-- com.zurich.qa.digitalnative.testcases.APACQuotePlanTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

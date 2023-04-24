@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="APAC Quote Screen3(Quote PolicyHolder) Test">
+	<!-- Test
+  <test thread-count="2" parallel="methods" name="Test">
+  </test>   -->
+	<listeners>
+		<listener class-name="com.zurich.qa.digitalnative.listeners.ExtentReportListener" />
+		<listener class-name="com.zurich.qa.digitalnative.listeners.TestAllureListener" />
+	</listeners>
+	<test thread-count="1" name="APAC Quote Policy holder test">
+		<parameter name="ReadExcelPath" value="APACOneWay" />
+		<parameter name="DataSheetName" value="DINA-88" />
+		<classes>
+			<class name="com.zurich.qa.digitalnative.testcases.APACQuotePolicyHolderTest">
+				<methods>
+					<include name="validateMandatoryFieldsDINA_94_1" />
+					<include name="validateConfirmEmaildoesNotmatchEmailDINA_94_6" />
+					<include name="validateInvalidEmail_DINA_94_7" />
+					<include name="validateInvalidID_DINA_94_8" />
+					<include name="validateInvalidMobileNoTest_DINA_94_9" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="1" name="APAC Quote Policy holder test">
+		<parameter name="ReadExcelPath" value="APACRoundTrip" />
+		<parameter name="DataSheetName" value="DINA-94" />
+		<classes>
+			<class name="com.zurich.qa.digitalnative.testcases.APACQuotePolicyHolderTest">
+				<methods>
+					<include name="FamilyMandatoryDifferentGender_DINA_94_3" />
+						<include name="FamilyMax100_DINA_94_4" />
+						<include name="FamilyMax100NotTravelling_DINA_94_5" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>
